@@ -76,4 +76,4 @@ The below macro cycle is to check whether each pre-defined value separated by a 
 The text "I Have A TV And A Desk" will be updated as "I Have a TV and a Desk" after the above macro cycle. The article "a" and the conjunctions "and" was changed to lowcase texts.
 
 The full codings can be found via below link:
-
+https://github.com/JasmineZJW/SAS/blob/master/titlecase
