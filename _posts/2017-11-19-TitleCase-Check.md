@@ -57,7 +57,7 @@ The CALL PRXNEXT rountine can be used to indentify the location of the first cha
   end; 
 ```
 
-For example, text "I have a TV and a desk will be updated as "I Have A TV And A Desk" in the above process.
+For example, text "I have a TV and a desk" will be updated as "I Have A TV And A Desk" in the above process.
 
 ## 2. To Lowcase the Pre-Defined Values
 
