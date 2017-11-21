@@ -22,7 +22,7 @@ tags:
                                            ---SDTM IG 3.2 (4.1.2.4 Case Use of Text in Submitted Data, page 32)
 
 # Logics of the Macro
-The macro use the wildcard "/b" in perl regular expression to identify the boundaries among words. Note that the boundaries are not always blank spaces. Sometimes it could be a dash (follow-up) or brackets. Therefore, perl regular expression is the best way to separate each word in the text.
+The macro use the wildcard `/b` in perl regular expression to identify the boundaries among words. Note that the boundaries are not always blank spaces. Sometimes it could be a dash (follow-up) or brackets. Therefore, perl regular expression is the best way to separate each word in the text.
 
 There are four parameters defined in the macro:
 	1	indt_: specify the input dataset which includes labels to be checked.
@@ -57,11 +57,11 @@ The CALL PRXNEXT rountine can be used to indentify the location of the first cha
   end; 
 ```
 
-For example, text "I have a TV and a desk" will be updated as "I Have A TV And A Desk" in the above process.
+For example, text `"I have a TV and a desk"` will be updated as `"I Have A TV And A Desk"` in the above process.
 
 ## 2. To Lowcase the Pre-Defined Values
 
-The below macro cycle is to check whether each pre-defined value separated by a "|" in the macro parameter &EXCL. exist in the text and use PRXCHANGE function to replace it as lowcase text. The "/i" modifier will make the match case insensitive.
+The below macro cycle is to check whether each pre-defined value separated by a `|` in the macro parameter &EXCL. exist in the text and use PRXCHANGE function to replace it as lowcase text. The `/i` modifier will make the match case insensitive.
 
 ```swift
   %let i=1;
@@ -73,7 +73,7 @@ The below macro cycle is to check whether each pre-defined value separated by a 
   %end;
 ```
   
-The text "I Have A TV And A Desk" will be updated as "I Have a TV and a Desk" after the above macro cycle. The article "a" and the conjunctions "and" was changed to lowcase texts.
+The text `"I Have A TV And A Desk"` will be updated as `"I Have a TV and a Desk"` after the above macro cycle. The article `"a"` and the conjunctions `"and"` was changed to lowcase texts.
 
 The full codings can be found via below link: 
 https://github.com/JasmineZJW/SAS/blob/master/titlecase
