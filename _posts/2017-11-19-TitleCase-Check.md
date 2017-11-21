@@ -15,10 +15,10 @@ tags:
 > It is usual to add values in supplemental domains or sponsor-defined test names in SDTM domains, as well as adding analysis required variables in ADaM dataset. As stated in CDISC IG, the label of those values/variables should be in title case. This macro is to check whether the manual added labels comply to the CDISC rules.
 
 # Case Rule in SDTM IG
-"Adjust the labels of the variables only as appropriate to properly convey the meaning in the context of the data being submitted in the newly created domain. Use title case for all labels (title case means to capitalize the first letter of every word except for articles, prepositions, and conjunctions)."  
+"Adjust the labels of the variables only as appropriate to properly convey the meaning in the context of the data being submitted in the newly created domain. Use title case for all labels (title case means to capitalize the first letter of every word except for articles, prepositions, and conjunctions)."               
 ---SDTM IG 3.2 (2.6 Creating a New Domain, page 16)
 							   
-"It is recommended that text data be submitted in upper case text. Exceptions may include long text data (such as comment text); values of --TEST in Findings datasets (which may be more readable in title case if used as labels in transposed views); and certain controlled terminology [see Section 4.1.3.2, Controlled Terminology Text Case ] that are already in mixed case. "  
+"It is recommended that text data be submitted in upper case text. Exceptions may include long text data (such as comment text); values of --TEST in Findings datasets (which may be more readable in title case if used as labels in transposed views); and certain controlled terminology [see Section 4.1.3.2, Controlled Terminology Text Case ] that are already in mixed case. "              
 ---SDTM IG 3.2 (4.1.2.4 Case Use of Text in Submitted Data, page 32)
 
 # Logics of the Macro
@@ -39,9 +39,11 @@ a. Words with characters are in all capitals, those words seem to be an acronym 
 
 b. Units that should follow controlled terminology. This is a special case in clinical trials. You can specify the frequently used units in the macro parameter (excl), those units will be excluded from being changed.
 
-c. This is a rare situation and it is tricky is that many words can be used in different grammatical functions. Take the one example from the title case converter page (<http://titlecaseconverter.com>)
-	•	by: Stand by Me, but Stand By for Action 
-	The first "by" is used as a preposition, so it should be in lower case. However, the second "by" is used as an adverb, therefore the first character should be in uppercase. Such situation is quite rare in clinical trials, but you may pay attention to this once happend.
+c. This is a rare situation and it is tricky is that many words can be used in different grammatical functions. Take the one example from the title case converter page (<http://titlecaseconverter.com>)  
+
+      •	by: Stand by Me, but Stand By for Action 
+      
+The first "by" is used as a preposition, so it should be in lower case. However, the second "by" is used as an adverb, therefore the first character should be in uppercase. Such situation is quite rare in clinical trials, but you may pay attention to this once happend.
 Since we have special cases that cannot be processed using programs only, in the macro, a new dataset with a new variable naming "LABEL" is generated. If your original text does not match the new variable, records will be listed in the checking output. Then you can check manually to see whether there are special cases.
 
 ## 1. To Upcase Each Word in the Text
