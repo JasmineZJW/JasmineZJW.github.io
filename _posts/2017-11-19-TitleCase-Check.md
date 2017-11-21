@@ -46,6 +46,7 @@ Since we have special cases that cannot be processed using programs only, in the
 
 The CALL PRXNEXT rountine can be used to indentify the location of the first character of each word. It is usefule when we have a regex which matches multiple times (or an unknown number of times) in our string of interest. Then we can use the call routine to get the next occurrence of the matching pattern.
 
+```swift
   START = 1;
   STOP  =length(&invar_.);
   REUC  = prxparse("/\b\w/");
@@ -54,13 +55,15 @@ The CALL PRXNEXT rountine can be used to indentify the location of the first cha
       call prxnext (REUC, START, STOP, LABEL, POS, LENGTH);
       LABEL = substr(LABEL, 1, START-2)||upcase(substr(LABEL, START-1, 1))||substr(LABEL, START);
   end; 
-  
-For example, text "I have a TV and a desk" will be updated as "I Have A TV And A Desk" in the above process.
+```
+
+For example, text '"I have a TV and a desk' will be updated as '"I Have A TV And A Desk"' in the above process.
 
 ## 2. To Lowcase the Pre-Defined Values
 
-The below macro cycle is to check whether each pre-defined value separated by a "|" in the macro parameter &EXCL. exist in the text and use PRXCHANGE function to replace it as lowcase text. The "/i" modifier will make the match case insensitive.
+The below macro cycle is to check whether each pre-defined value separated by a '|' in the macro parameter &EXCL. exist in the text and use PRXCHANGE function to replace it as lowcase text. The '/i' modifier will make the match case insensitive.
 
+```swift
   %let i=1;
   %let val=%scan(&excl.,&i.,"|");
   %do %while(%str(&val.) ne );
@@ -68,8 +71,9 @@ The below macro cycle is to check whether each pre-defined value separated by a 
       %let i=%eval(&i+1);
       %let val=%scan(&excl.,&i.,"|");
   %end;
+```
   
-The text "I Have A TV And A Desk" will be updated as "I Have a TV and a Desk" after the above macro cycle. The article "a" and the conjunctions "and" was changed to lowcase texts.
+The text '"I Have A TV And A Desk"' will be updated as '"I Have a TV and a Desk"' after the above macro cycle. The article '"a"' and the conjunctions '"and"' was changed to lowcase texts.
 
 The full codings can be found via below link: 
 https://github.com/JasmineZJW/SAS/blob/master/titlecase
