@@ -41,7 +41,7 @@ b. Units that should follow controlled terminology. This is a special case in cl
 
 c. This is a rare situation and it is tricky is that many words can be used in different grammatical functions. Take the one example from the title case converter page (<http://titlecaseconverter.com>)  
 
-      •	by: Stand by Me, but Stand By for Action 
+  •	by: Stand by Me, but Stand By for Action 
       
 The first "by" is used as a preposition, so it should be in lower case. However, the second "by" is used as an adverb, therefore the first character should be in uppercase. Such situation is quite rare in clinical trials, but you may pay attention to this once happend.
 Since we have special cases that cannot be processed using programs only, in the macro, a new dataset with a new variable naming "LABEL" is generated. If your original text does not match the new variable, records will be listed in the checking output. Then you can check manually to see whether there are special cases.
