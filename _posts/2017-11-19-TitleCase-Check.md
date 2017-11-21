@@ -31,7 +31,7 @@ There are four parameters defined in the macro:
 -	outdt_: specify the name of output dataset.
 -	excl: specify the articles, prepositions, and conjunctions that need to exclude from title case.
 	
-The rule of the title case is referring to the definition from wikipedia, details can be accessed via below link: http://titlecaseconverter.com
+The rule of the title case is referring to the definition from wikipedia, details can be accessed via below link: ≤http://titlecaseconverter.com≥
 
 There are special cases we have to due with when we convert the text into title cases:
 
@@ -39,7 +39,7 @@ a. Words with characters are in all capitals, those words seem to be an acronym 
 
 b. Units that should follow controlled terminology. This is a special case in clinical trials. You can specify the frequently used units in the macro parameter (excl), those units will be excluded from being changed.
 
-c. This is a rare situation and it is tricky is that many words can be used in different grammatical functions. Take the one example from the title case converter page (http://titlecaseconverter.com)
+c. This is a rare situation and it is tricky is that many words can be used in different grammatical functions. Take the one example from the title case converter page (≤http://titlecaseconverter.com≥)
 	•	by: Stand by Me, but Stand By for Action 
 	The first "by" is used as a preposition, so it should be in lower case. However, the second "by" is used as an adverb, therefore the first character should be in uppercase. Such situation is quite rare in clinical trials, but you may pay attention to this once happend.
 Since we have special cases that cannot be processed using programs only, in the macro, a new dataset with a new variable naming "LABEL" is generated. If your original text does not match the new variable, records will be listed in the checking output. Then you can check manually to see whether there are special cases.
@@ -78,4 +78,4 @@ The below macro cycle is to check whether each pre-defined value separated by a 
 The text `"I Have A TV And A Desk"` will be updated as `"I Have a TV and a Desk"` after the above macro cycle. The article `"a"` and the conjunctions `"and"` was changed to lowcase texts.
 
 The full codings can be found via below link: 
-https://github.com/JasmineZJW/SAS/blob/master/titlecase
+≤https://github.com/JasmineZJW/SAS/blob/master/titlecase≥
