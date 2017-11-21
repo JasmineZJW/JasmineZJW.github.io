@@ -25,10 +25,10 @@ tags:
 The macro use the wildcard `/b` in perl regular expression to identify the boundaries among words. Note that the boundaries are not always blank spaces. Sometimes it could be a dash (follow-up) or brackets. Therefore, perl regular expression is the best way to separate each word in the text.
 
 There are four parameters defined in the macro:
-	1	indt_: specify the input dataset which includes labels to be checked.
-	2	invar_: specify the variable name that store the label.
-	3	outdt_: specify the name of output dataset.
-	4	excl: specify the articles, prepositions, and conjunctions that need to exclude from title case.
+-	indt_: specify the input dataset which includes labels to be checked.
+-	invar_: specify the variable name that store the label.
+-	outdt_: specify the name of output dataset.
+-	excl: specify the articles, prepositions, and conjunctions that need to exclude from title case.
 	
 The rule of the title case is referring to the definition from wikipedia, details can be accessed via below link: http://titlecaseconverter.com
 
