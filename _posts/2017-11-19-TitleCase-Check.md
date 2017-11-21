@@ -4,7 +4,7 @@ title:      A Macro to Check Title Case When Adding Variables/Values Into SDTM/A
 subtitle:   
 date:       2017-11-19
 author:     Jasmine Zhang
-header-img: img/IMG-0554.jpg
+header-img: img/post-bg-1.jpg
 catalog: true
 tags:
     - SDTM 
