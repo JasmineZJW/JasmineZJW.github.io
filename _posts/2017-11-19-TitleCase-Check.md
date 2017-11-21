@@ -57,11 +57,11 @@ The CALL PRXNEXT rountine can be used to indentify the location of the first cha
   end; 
 ```
 
-For example, text '"I have a TV and a desk' will be updated as '"I Have A TV And A Desk"' in the above process.
+For example, text "I have a TV and a desk will be updated as "I Have A TV And A Desk" in the above process.
 
 ## 2. To Lowcase the Pre-Defined Values
 
-The below macro cycle is to check whether each pre-defined value separated by a '|' in the macro parameter &EXCL. exist in the text and use PRXCHANGE function to replace it as lowcase text. The '/i' modifier will make the match case insensitive.
+The below macro cycle is to check whether each pre-defined value separated by a "|" in the macro parameter &EXCL. exist in the text and use PRXCHANGE function to replace it as lowcase text. The "/i" modifier will make the match case insensitive.
 
 ```swift
   %let i=1;
@@ -73,7 +73,7 @@ The below macro cycle is to check whether each pre-defined value separated by a 
   %end;
 ```
   
-The text '"I Have A TV And A Desk"' will be updated as '"I Have a TV and a Desk"' after the above macro cycle. The article '"a"' and the conjunctions '"and"' was changed to lowcase texts.
+The text "I Have A TV And A Desk" will be updated as "I Have a TV and a Desk" after the above macro cycle. The article "a" and the conjunctions "and" was changed to lowcase texts.
 
 The full codings can be found via below link: 
 https://github.com/JasmineZJW/SAS/blob/master/titlecase
