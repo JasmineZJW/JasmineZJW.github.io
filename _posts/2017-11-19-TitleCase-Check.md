@@ -57,7 +57,8 @@ The CALL PRXNEXT rountine can be used to indentify the location of the first cha
   call prxnext (REUC, START, STOP, LABEL, POS, LENGTH);
   do while (POS > 0);
       call prxnext (REUC, START, STOP, LABEL, POS, LENGTH);
-      LABEL = substr(LABEL, 1, START-2)||upcase(substr(LABEL, START-1, 1))||substr(LABEL, START);
+      LABEL = substr(LABEL, 1, START-2)||upcase(substr(LABEL, START-1, 1))
+            ||substr(LABEL, START);
   end; 
 ```
 
