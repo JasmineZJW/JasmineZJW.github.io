@@ -16,10 +16,12 @@ tags:
 
 # Case Rule in SDTM IG
 "Adjust the labels of the variables only as appropriate to properly convey the meaning in the context of the data being submitted in the newly created domain. Use title case for all labels (title case means to capitalize the first letter of every word except for articles, prepositions, and conjunctions)." 
-                                                           ---SDTM IG 3.2 (2.6 Creating a New Domain, page 16)
+                                                           
+							   ---SDTM IG 3.2 (2.6 Creating a New Domain, page 16)
 							   
-"It is recommended that text data be submitted in upper case text. Exceptions may include long text data (such as comment text); values of --TEST in Findings datasets (which may be more readable in title case if used as labels in transposed views); and certain controlled terminology [see Section 4.1.3.2, Controlled Terminology Text Case ] that are already in mixed case. "          
-                                           ---SDTM IG 3.2 (4.1.2.4 Case Use of Text in Submitted Data, page 32)
+"It is recommended that text data be submitted in upper case text. Exceptions may include long text data (such as comment text); values of --TEST in Findings datasets (which may be more readable in title case if used as labels in transposed views); and certain controlled terminology [see Section 4.1.3.2, Controlled Terminology Text Case ] that are already in mixed case. " 
+
+                                                          ---SDTM IG 3.2 (4.1.2.4 Case Use of Text in Submitted Data, page 32)
 
 # Logics of the Macro
 The macro use the wildcard `/b` in perl regular expression to identify the boundaries among words. Note that the boundaries are not always blank spaces. Sometimes it could be a dash (follow-up) or brackets. Therefore, perl regular expression is the best way to separate each word in the text.
