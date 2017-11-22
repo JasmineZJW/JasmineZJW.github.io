@@ -12,7 +12,7 @@ tags:
     - Case
 ---
 
-> It is usual to add values in supplemental domains or sponsor-defined test names in SDTM domains, as well as adding analysis required variables in ADaM dataset. As stated in CDISC IG, the label of those values/variables should be in title case. This macro is to check whether the manual added labels comply to the CDISC rules.
+> It is common to add values in supplemental domains or sponsor-defined test names in SDTM domains, as well as adding analysis required variables in ADaM dataset. As stated in CDISC IG, the label of those values/variables should be in title case. This macro is to check whether the manual added labels comply to the CDISC rules.
 
 # Case Rule in SDTM IG
 "Adjust the labels of the variables only as appropriate to properly convey the meaning in the context of the data being submitted in the newly created domain. Use title case for all labels (title case means to capitalize the first letter of every word except for articles, prepositions, and conjunctions)."               
