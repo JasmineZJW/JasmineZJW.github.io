@@ -39,7 +39,7 @@ a. Words with characters are in all capitals, those words seem to be an acronym 
 
 b. Units that should follow controlled terminology. This is a special case in clinical trials. You can specify the frequently used units in the macro parameter (excl), those units will be excluded from being changed.
 
-c. This is a rare situation and it is tricky is that many words can be used in different grammatical functions. Take the one example from the title case converter page (<http://titlecaseconverter.com>)  
+c. This is a rare situation and it is tricky that many words can be used in different grammatical functions. Take the one example from the title case converter page (<http://titlecaseconverter.com>)  
 
   •	by: Stand by Me, but Stand By for Action 
       
