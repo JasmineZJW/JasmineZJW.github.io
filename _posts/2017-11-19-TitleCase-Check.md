@@ -12,13 +12,13 @@ tags:
     - Case
 ---
 
-> It is common to add values in supplemental domains or sponsor-defined test names in SDTM domains, as well as adding analysis required variables in ADaM dataset. As stated in CDISC IG, the label of those values/variables should be in title case. This macro is to check whether the manual added labels comply to the CDISC rules.
+It is common to add values in supplemental domains or sponsor-defined test names in SDTM domains, as well as adding analysis required variables in ADaM dataset. As stated in CDISC IG, the label of those values/variables should be in title case. This macro is to check whether the manual added labels comply to the CDISC rules.
 
 # Case Rule in SDTM IG
-"Adjust the labels of the variables only as appropriate to properly convey the meaning in the context of the data being submitted in the newly created domain. Use title case for all labels (title case means to capitalize the first letter of every word except for articles, prepositions, and conjunctions)."               
+>  Adjust the labels of the variables only as appropriate to properly convey the meaning in the context of the data being submitted in the newly created domain. Use title case for all labels (title case means to capitalize the first letter of every word except for articles, prepositions, and conjunctions).               
 ---SDTM IG 3.2 (2.6 Creating a New Domain, page 16)
 							   
-"It is recommended that text data be submitted in upper case text. Exceptions may include long text data (such as comment text); values of --TEST in Findings datasets (which may be more readable in title case if used as labels in transposed views); and certain controlled terminology [see Section 4.1.3.2, Controlled Terminology Text Case ] that are already in mixed case. "              
+>  It is recommended that text data be submitted in upper case text. Exceptions may include long text data (such as comment text); values of --TEST in Findings datasets (which may be more readable in title case if used as labels in transposed views); and certain controlled terminology [see Section 4.1.3.2, Controlled Terminology Text Case ] that are already in mixed case.              
 ---SDTM IG 3.2 (4.1.2.4 Case Use of Text in Submitted Data, page 32)
 
 # Logics of the Macro
