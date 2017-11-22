@@ -33,7 +33,7 @@ There are four parameters defined in the macro:
 	
 The rule of the title case is referring to the definition from wikipedia, details can be accessed via below link: <http://titlecaseconverter.com>
 
-There are special cases we have to due with when we convert the text into title cases:
+There are special cases we have to deal with when we convert the text into title cases:
 
 a. Words with characters are in all capitals, those words seem to be an acronym (e.g. HIV, AE, etc.). Such words can not be identified through program since there are so many cases of acronym and we cannot make a list of them. So please be caution when you need to create a label text with such kinds of acronym. You have to upcase the whole term when you create the label. The macro will not process this kind of words. All the capital wordings remains capitals.
 
