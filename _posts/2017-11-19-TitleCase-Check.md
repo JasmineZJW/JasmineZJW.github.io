@@ -46,7 +46,7 @@ c. This is a rare situation and it is tricky that many words can be used in diff
 The first "by" is used as a preposition, so it should be in lower case. However, the second "by" is used as an adverb, therefore the first character should be in uppercase. Such situation is quite rare in clinical trials, but you may pay attention to this once happend.
 Since we have special cases that cannot be processed using programs only, in the macro, a new dataset with a new variable naming "LABEL" is generated. If your original text does not match the new variable, records will be listed in the checking output. Then you can check manually to see whether there are special cases.
 
-## 1. To Upcase Each Word in the Text
+## 1. To Upcase the First Character of Each Word in the Text
 
 The CALL PRXNEXT rountine can be used to indentify the location of the first character of each word. It is usefule when we have a regex which matches multiple times (or an unknown number of times) in our string of interest. Then we can use the call routine to get the next occurrence of the matching pattern.
 
@@ -78,7 +78,7 @@ The below macro cycle is to check whether each pre-defined value separated by a 
   %end;
 ```
   
-The text `"I Have A TV And A Desk"` will be updated as `"I Have a TV and a Desk"` after the above macro cycle. The article `"a"` and the conjunctions `"and"` was changed to lowcase texts.
+The text `"I Have A TV And A Desk"` will be updated as `"I Have a TV and a Desk"` after the above macro cycle. The article `"a"` and the conjunction `"and"` was changed to lowcase texts.
 
 The full codings can be found via below link: 
 <https://github.com/JasmineZJW/SAS/blob/master/titlecase>
