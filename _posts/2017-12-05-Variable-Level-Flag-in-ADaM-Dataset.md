@@ -15,6 +15,7 @@ Record-level flags can be used when the subject is included in the subject-level
 
 
 #Introduction of the Record-Level Population Flags
+
 There are 5 records-level population flags defined in the ADaM IG 1.1: 
 
 Variable Name | Variable Label
@@ -32,6 +33,7 @@ As stated in ADaM IG 1.1, additional flags can be added as long as the variable 
 3. Corresponding numeric flags are also permissible if the character flags exist. For the numeric flags, variable names should be ended with "RFN". Only 1 or null values are allowed.
 
 #Handling Derived Analysis Timepoint when Record-Level Flags Exist
+
 Assume that it was stated in the SAP that only those records collected within the permissible time window should be included in the Per-Protocol analysis. In that case, records which was conducted out of the scheduled window will be excluded from the Per-Protocol analysis. However, those records will be taken into account in the Itention-To-Treat analysis.
 
 
