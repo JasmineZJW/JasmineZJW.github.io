@@ -42,4 +42,4 @@ Example of different timepoints for different analysis population:
 USUBJID | PARAM| ADTM |AVISIT | ATPTNUM | LBSEQ | AVALS
 
 
- 
+ （To be continued...）
