@@ -38,6 +38,7 @@ As stated in ADaM IG 1.1, additional flags can be added as long as the variable 
 Assume that it was stated in the SAP that only those records collected within the permissible time window should be included in the Per-Protocol analysis. In that case, records which was conducted out of the scheduled window will be excluded from the Per-Protocol analysis. However, those records will be included in the Itention-To-Treat analysis. ENDPOINT might be different for Per-Protocol analysis or Itention-To-Treat analysis. 
 
 Example of different timepoints for different analysis population:
+(https://github.com/JasmineZJW/JasmineZJW.github.io/blob/master/img/屏幕快照%202017-12-17%20下午11.49.22.png?raw=true)
 
 Explanation
 
