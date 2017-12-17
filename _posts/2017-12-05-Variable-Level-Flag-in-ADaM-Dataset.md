@@ -39,17 +39,6 @@ Assume that it was stated in the SAP that only those records collected within th
 
 Example of different timepoints for different analysis population:
 
-ROW|USUBJID | PARAM         | ADT      |ADY  |AVISIT   |LBSEQ|AWTARGET|AWLO|AWHI|AWU |AWDIFF|VISIT |PPSRFL|ITTRFL
----|--------|---------------|----------|---- |---------|-----|--------|----|----|----|------|------|------|------
-1  |101     |Systolic Blood |2017-09-16|-15  |SCREENING|1    |-14     |-14 |-1  |DAYS|1     |DAY 1 |Y     |Y
-   |        |Pressure (mmHg)|          |     |         |     |        |    |    |    |      |      |      | 
-2  |101     |Systolic Blood |2017-10-01|1    |DAY 1    |2    |1       |1   |1   |DAYS|0     |DAY 1 |Y     |Y
-   |        |Pressure (mmHg)|          |     |         |     |        |    |    |    |      |      |      | 
-3  |101     |Systolic Blood |2017-10-07|7    |DAY 7    |3    |7       |6   |7   |DAYS|0     |DAY 7 |Y     |Y
-   |        |Pressure (mmHg)|          |     |         |     |        |    |    |    |      |      |      |       
-4  |101     |Systolic Blood |2017-10-16|16   |         |4    |14      |13  |15  |DAYS|2     |DAY 14|      |Y
-   |        |Pressure (mmHg)|          |     |         |     |        |    |    |    |      |      |      | 
-
 Explanation
 
 
