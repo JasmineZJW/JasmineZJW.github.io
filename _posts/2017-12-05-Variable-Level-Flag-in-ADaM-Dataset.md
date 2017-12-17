@@ -41,7 +41,11 @@ Example of different timepoints for different analysis population:
 ![Aaron Swartz](https://github.com/JasmineZJW/JasmineZJW.github.io/blob/master/img/屏幕快照%202017-12-18%20上午12.56.37.png?raw=true)
 
 Explanation:
-The analysis visit windowinga vriables are used to stored the planned schedules defined in the protocol. Note that beginners tend to make mistakes when calculating AWTDIFF: AWTDIFF is the absolute difference between ADY or ARELTM and AWTARGET. It will be necessary to adjust for the fact that there is no day 0 in the event that ADY and AWTARGET are not of the same sign.
+
+The analysis visit windowings vriables are used to stored the planned schedules defined in the protocol. Note that beginners tend to make mistakes when calculating AWTDIFF: 
+
+  > AWTDIFF is the **absolute difference** between ADY or ARELTM and AWTARGET. It will be necessary to adjust for the fact that there is no day 0 in the event that ADY and AWTARGET are not of the same sign.
+  
 In other words:
     if AWU="DAYS", AWDIFF=|ADY-AWTARGET| when ADY and AWTARGET are of the same sign.
  or AWDIFF=|ADY-AWTARGET|+1 when ADY and AWTARGET are of not the same sign. 
