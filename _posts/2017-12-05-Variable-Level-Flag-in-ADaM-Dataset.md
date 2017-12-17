@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Record-Level Population Flag in ADaM Dataset (1)
+title:      Record-Level Population Flags in ADaM Dataset (1)
 subtitle:  
 date:       2017-12-08
 author:     Jasmine Zhang
