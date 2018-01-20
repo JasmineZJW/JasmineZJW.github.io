@@ -48,7 +48,7 @@ The analysis visit windowings vriables are used to stored the planned schedules 
   
 In other words:
     if AWU="DAYS", AWDIFF=|ADY-AWTARGET| when ADY and AWTARGET are of the same sign.
- or AWDIFF=|ADY-AWTARGET|+1 when ADY and AWTARGET are of not the same sign. 
+ Or AWDIFF=|ADY-AWTARGET|+1 when ADY and AWTARGET are not of the same sign. 
     if AWU="h", AWDIFF=|ARELTM-AWTARGET|.
 
 In the above example, ADY for row 1-3 falls within the scheduled windows, these records are included in both the PPS analysis and ITT analysis. Row 4 falls outside the scheduled window, it should be excluded from PPS analysis while included in ITT analysis. In such case, the analyzed endpoint value varies according to the population. The last available values for PPS analysis is row 3. However, for ITT analysis, the last available values for ITT analysis is row 4. Therefore, two derived "ENDPOINT" records are needed for different analysis purposes.
