@@ -32,19 +32,22 @@ keepdocx： Indicate whether to keep the combined docx file(s)
             * Y=keep the combined docx file(s)
             * N=remove the docx file(s)                        
 
-Step 1: 
+# Step 1: 
     The macro will read the TFL definition file from the specific path. This part will need to be changed to accommadate different formats of the TFL definition files. Basic information includes:
     TFLNO: Number of the TFLs.
     SUBTFLNO: Subnumber of the TFLs.
     TITLE: Title of the TFLs, will be printed in the TOC of the combined pdf.
 
-Step 2:
+# Step 2:
     To read all the rtf files from the speicified path or subfolders into sas datasets. 
+
     Let's take a look at the structure of the rtf files. An RTF file consists of an opening section, a content section and a closingsection.
     1) Opening section is the RTF code until the first \sectd of the file, which includes information of the layout of
 the file is when viewing as MS Word, etc., e.g. font styles and colors;
     2) Content section includes the content to be displayed. The RTF code for each page starts with \sect\sectd or \sectd; 
     3) Closing section is the RTF code after the last \pard of the file, typically only a closing curly brace.
+
+Below is the piece of SAS code to read all the rtf files into SAS dataset:
 
 RTF files can be concatenated by the following steps:
 1. Read in RTF files and output the RTF code to a SAS dataset.
