@@ -39,4 +39,20 @@ Step 1:
     TITLE: Title of the TFLs, will be printed in the TOC of the combined pdf.
 
 Step 2:
+    To read all the rtf files from the speicified path or subfolders into sas datasets. 
+    Let's take a look at the structure of the rtf files. An RTF file consists of an opening section, a content section and a closingsection.
+    1) Opening section is the RTF code until the first \sectd of the file, which includes information of the layout of
+the file is when viewing as MS Word, etc., e.g. font styles and colors;
+    2) Content section includes the content to be displayed. The RTF code for each page starts with \sect\sectd or \sectd; 
+    3) Closing section is the RTF code after the last \pard of the file, typically only a closing curly brace.
 
+RTF files can be concatenated by the following steps:
+1. Read in RTF files and output the RTF code to a SAS dataset.
+2. Remove the closing section of the first file;
+3. Remove the opening section of the last file;
+4. Remove both the opening section and closing section of all other files;
+5. Insert \sect in front of the first page of each RTF file except for the first one. The RTF code \sect starts a new
+page and \sectd sets the section properties to the default. Not surprisingly, the first section (first page) of an RTF
+file does not have \sect and always begins with \sectd while the rest sections always with \sect\sectd. In the combined file, the first page of each individual file is no longer the first page, except for the first file.\sect
+therefore needs to be inserted in front of the first \sectd of those files.
+6. Output above RTF code to one single file in such an order: the first file, the rest files and the last file.
