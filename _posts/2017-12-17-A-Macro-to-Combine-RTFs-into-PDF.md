@@ -97,7 +97,7 @@ therefore needs to be inserted in front of the first \sectd of those files.
 
 when combining the rtf files, we have to calculate the page numbers to be showed in the TOC.
 
-#Step 3:
+# Step 3:
 To create the TOC.
 Below is the small piece of macro to generate the toc for each rtf and link to the specific page in the combined pdf:
 
@@ -116,7 +116,7 @@ The second LINEIN defines the format of the TOC. The rtf code ```swift \ptabldot
 
 The third LINEIN closes the corresponding TOC line.
 
-#Step 4:
+# Step 4:
 The final step is to generate the VBA script and execute it using SAS program.
 ```swift
 filename vbs ""&vbs."";
