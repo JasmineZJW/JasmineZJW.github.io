@@ -60,6 +60,9 @@ the file is when viewing as MS Word, etc., e.g. font styles and colors;
     2) Content section includes the content to be displayed. The RTF code for each page starts with \sect\sectd or \sectd; 
     3) Closing section is the RTF code after the last \pard of the file, typically only a closing curly brace.
 
+More details of the rtf codes please refer to the below link:
+<http://latex2rtf.sourceforge.net/rtfspec_7.html#rtfspec_tabledef>
+
 Below is the piece of SAS code to read all the rtf files into SAS dataset:
 ```swift
 %macro read_rtf (i=, in_file=, bookmark=);
@@ -92,4 +95,61 @@ file does not have \sect and always begins with \sectd while the rest sections a
 therefore needs to be inserted in front of the first \sectd of those files.
 6. Output above RTF code to one single file in such an order: the first file, the rest files and the last file.
 
+when combining the rtf files, we have to calculate the page numbers to be showed in the TOC.
 
+#Step 3:
+To create the TOC.
+Below is the small piece of macro to generate the toc for each rtf and link to the specific page in the combined pdf:
+
+```swift
+%macro toc (bookmark=, tflno=, title=, nspace=, firstp=);
+    LINEIN = '\pard\sa200\li2000\f0\fs20\b0\ql{\field{\*\fldinst HYPERLINK  \\l "'||strip(&bookmark.)||'"}'; output;
+    LINEIN = '{\fldrslt \li18000\fi200 '||strip(&tflno.)||' \tx2000\tab '||strip(&title.)||' \ptabldot\pindtabqr '||strip(&firstp.)||'}}'; output;
+    LINEIN = '\ri2000\par';output;```swift 
+%mend;
+```
+The first LINEIN creates the hyperlink to each individual rtf:
+```swift 
+ {\field {\*\fldinst HYPERLINK \\l "bookmark_name"}{\fldrslt title_of_RTF_output}}
+```
+The second LINEIN defines the format of the TOC. The rtf code ```swift \ptabldot\pindtabqr ``` right aligns page numbers and inserts dotted lines between titles and page numbers.
+
+The third LINEIN closes the corresponding TOC line.
+
+#Step 4:
+The final step is to generate the VBA script and execute it using SAS program.
+```swift
+filename vbs ""&vbs."";
+data _null_;
+  file vbs;
+  length vbscmd $200.;
+  put 'Dim objWord';
+  put 'Dim objWordDoc';
+  put 'Set objWord = CreateObject("Word.Application")';
+  put 'Wscript.Sleep 500';
+  put 'objWord.Visible = False';
+  vbscmd='Set objWordDoc = objWord.Documents.Open("'|| "&docx." ||'")';
+  put vbscmd;
+  put 'Wscript.Sleep 300';
+  vbscmd='objWordDoc.ExportAsFixedFormat "'||"&pdf."||'", 17, False,1,0,1,1,0,False,True,2,False,True,False';
+  put vbscmd;
+  put 'objWordDoc.Close False';
+  put 'objWord.Quit';
+run;
+
+filename vbs;
+
+data _null_;
+  /* execute vbs */
+  call system(""&vbs."");
+  /* clean up: delete  vbs */
+  call system("del /q "&vbs."");
+  /* clean up: delete  docx */
+run;
+```
+
+# Conclusion:
+This post explain the rationals of the rtf_combine macro. By using the macro, you just have to simply define the path of the files in the macro parameters and execute it. The macro will help to combine the rtfs into 1 or several pdf files with TOC and bookmark included.
+
+Referece:
+A Fully Automated Approach to Concatenate RTF outputs and Create TOC (<https://www.lexjansen.com/pharmasug-cn/2015/DV/PharmaSUG-China-2015-DV28.pdf>)
