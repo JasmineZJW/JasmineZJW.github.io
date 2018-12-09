@@ -2,7 +2,7 @@
 layout:     post
 title:      One Step to Combine RTFs into PDF files
 subtitle:   
-date:       2017-12-17
+date:       2018-08-17
 author:     Jasmine Zhang
 header-img: img/post-bg-4.JPG
 catalog: true
